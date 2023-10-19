@@ -1,0 +1,16 @@
+<form action="{% url 'login' %}" method="POST">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-12 col-lg-12">
+        <label for="Username"><b>Username</b></label>
+            <input type="text" id="Username" class="form-control" name="username" placeholder="Entre com o username cadastrado">
+        </div>
+            <div class="col-12 col-lg-12">
+            <label for="senha"><b>Senha</b></label>
+            <input id="senha" type="password" class="form-control" name="senha" placeholder="Digite aqui sua senha">
+        </div>
+        <div class="col-12 text-center">
+            <button class="btn btn-success" type="submit">Acessar sua conta</button>
+        </div>
+    </div>
+</form>

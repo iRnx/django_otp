@@ -1,0 +1,12 @@
+{% block content %}
+  <h2>Verificar Autenticação de Dois Fatores (2FA)</h2>
+  
+  <form method="post">
+    {% csrf_token %}
+    <label for="code">Código 2FA:</label>
+    <input type="text" id="code" name="code" required>
+    <button type="submit">Verificar</button>
+  </form>
+  
+  
+{% endblock %}
