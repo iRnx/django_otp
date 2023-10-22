@@ -1,10 +1,4 @@
 <h1>Estou na home logado com: {{ request.user }}</h1>
 
 
-{% if totp_device %}
-    <!-- Criar uma partials para inserir outro template -->
-    {% include 'partials/_gostaria_de_desativar.html' %}
-{% else %}
-    <!-- Criar uma partials para inserir outro template -->
-    {% include 'partials/_gostaria_de_ativar.html' %}
-{% endif %}
+<a href="{% url 'teste' %}"><button>Two Factor</button></a>
