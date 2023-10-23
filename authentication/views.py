@@ -12,13 +12,13 @@ from .models import UserProfile, User
 from .utils import criar_qr_code
 
 
-def teste(request):
+def two_factor(request):
     totp_device = TOTPDevice.objects.filter(user=request.user, confirmed=True).first()
    
     if not totp_device is None:
-        return render(request, 'teste.html', {'totp_device': totp_device, 'confirmed': True})
+        return render(request, 'two_factor.html', {'totp_device': totp_device, 'confirmed': True})
     else:
-        return render(request, 'teste.html', {'totp_device': totp_device})
+        return render(request, 'two_factor.html', {'totp_device': totp_device})
 
 
 def home(request):
